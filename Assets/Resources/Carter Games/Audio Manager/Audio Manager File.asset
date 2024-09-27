@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ae0c8eafd7263429865ae0f6fe29e6, type: 3}
+  m_Name: Audio Manager File
+  m_EditorClassIdentifier: 
+  tabPos: 0
+  audioMixer:
+  - {fileID: 0}
+  soundPrefab: {fileID: 322064603624763291, guid: f97cb5ab9dca8bd488116e0ffc057e10,
+    type: 3}
+  isPopulated: 1
+  directory:
+  - Assets/SFX
+  library:
+  - key: Begin
+    value: {fileID: 8300000, guid: c1ae476c69168334ea173916c567013f, type: 3}
+  - key: Bomb
+    value: {fileID: 8300000, guid: 8524588a69a4f3e40bb597b6221138f1, type: 3}
+  - key: EnemySpawn
+    value: {fileID: 8300000, guid: bdc80e107358397478ac096548241f05, type: 3}
+  - key: ErrorPick
+    value: {fileID: 8300000, guid: 35db1956de915b24f961a337c4b272e5, type: 3}
+  - key: GlassBreaking
+    value: {fileID: 8300000, guid: 45d24410c31e37d46b9df6b169256b30, type: 3}
+  - key: HeartHit
+    value: {fileID: 8300000, guid: c3e932ea98dfa4a43b9e0b5da07cec20, type: 3}
+  - key: IncreasingScore
+    value: {fileID: 8300000, guid: b9e9033d02088f44ea7f2eee95b19edd, type: 3}
+  - key: Laser
+    value: {fileID: 8300000, guid: a105114a854587f4280124dd8270d6df, type: 3}
+  - key: PickCharacter
+    value: {fileID: 8300000, guid: 08f6033d5b38b414e982ee9f29e1ceb2, type: 3}
+  - key: Success
+    value: {fileID: 8300000, guid: 0bb7993af4f0e974290386c4dbdef62f, type: 3}
+  - key: Typewriter
+    value: {fileID: 8300000, guid: 8cd6ca4d6ee86d8468b54ff1442269fa, type: 3}
+  - key: Typing
+    value: {fileID: 8300000, guid: aa166c97bab7076479e300fd49cee308, type: 3}
