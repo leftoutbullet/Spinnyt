@@ -8,6 +8,7 @@ public class DifficultyUpdate : MonoBehaviour
     private Timer timer;
     private SpawnEnemies difficulty;
     public PianoFlicker pianoFlicker; // Reference to the PianoFlicker
+    float nextFlickerTime = 40;
 
     void Start()
     {
@@ -31,9 +32,12 @@ public class DifficultyUpdate : MonoBehaviour
         {
             difficulty.difficulty = Difficulty.Medium;
         }
-        if (timer.timeElapsed > 40)
+
+        // Start flickering at 40 seconds and every 15 seconds afterward
+        if (timer.timeElapsed >= nextFlickerTime)
         {
             pianoFlicker.StartFlickering();
+            nextFlickerTime += 15; // Schedule the next flicker
         }
     }
 }

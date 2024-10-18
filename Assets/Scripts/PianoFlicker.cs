@@ -71,8 +71,17 @@ public class PianoFlicker : MonoBehaviour
         isFlickering = false;
         hasFlickered = true;
 
+        StartCoroutine(lastTileBeforeReset(pianosActive[selectedIndex]));   
+
         // Here you can add the logic to spawn the object from the selected side
         SpawnCircleAttack(circleSpawnPoints[selectedIndex].transform.position);
+    }
+
+    private IEnumerator lastTileBeforeReset(GameObject activeTile) 
+    {
+        yield return new WaitForSeconds(2f);
+        activeTile.SetActive(false);
+        hasFlickered = false;
     }
 
     private void DeactivateAllPianos()
