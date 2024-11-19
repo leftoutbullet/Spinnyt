@@ -30,7 +30,14 @@ public class DestroyThePlayer : MonoBehaviour
         Destroy(player);
         EventManager.PlayerDied();
         Destroy(gameObject);
-        CompleteTutorial();
+        if (PlayerPrefs.GetInt("TutorialCompleted", 0) == 0)
+        {
+            
+            PassTutorialCompletionData.TutorialJustCompleted = true;
+            CompleteTutorial();
+        }
+
+        //CompleteTutorial();
         StartCoroutine(endTutorialWait());
         
         TransitionManager.Instance.LoadLevel("MainMenu");

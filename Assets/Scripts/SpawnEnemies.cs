@@ -74,6 +74,7 @@ public class SpawnEnemies : MonoBehaviour
     void SpawnEnemy(Vector3 position)
     {
         Instantiate(enemyPrefab, position, Quaternion.identity);
+        
     }
 
     public void SpawnRandomEnemies(int count)
@@ -82,6 +83,7 @@ public class SpawnEnemies : MonoBehaviour
         {
             Vector3 randomPosition = GetRandomSidePosition();
             SpawnEnemy(randomPosition);
+            
         }
         AudioManager.instance.Play("EnemySpawn", volume: 0.5f);
     }

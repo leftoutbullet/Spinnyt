@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+
 /// <summary>
 /// Attach this script below a GameObject with an AudioSource and manually assign a clip and enable Play on Awake.
 /// Since this script does not care what song is playing you can implement an Audio manager to change songs as you wish.
@@ -35,9 +36,15 @@ public class SpectrumAnalyzer : MonoBehaviour
         folder = new GameObject("Pillars-" + pillars.Count);
         folder.transform.SetParent(transform);
 
+        // Offset the pillars' positions to be relative to this GameObject's position
+        Vector3 spawnOffset = transform.position;
+
         foreach (var piller in pillars)
         {
             piller.transform.SetParent(folder.transform);
+
+            // Offset the pillar's position by the transform's position
+            piller.transform.position += spawnOffset;
         }
 
         isBuilding = false;
